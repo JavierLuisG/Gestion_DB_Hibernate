@@ -40,7 +40,7 @@
 
 		<property name="hibernate.search.default.directory_provider">filesystem</property>
 		<property name="hibernate.search.default.indexBase">target/indexes</property>
-		<mapping class="org.hibernate.search.test.spatial.POI"/>
-
+<!--		<mapping class="org.hibernate.search.test.spatial.POI"/> -->
+		
 	</session-factory>
 </hibernate-configuration>
