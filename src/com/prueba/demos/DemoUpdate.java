@@ -26,15 +26,16 @@ public class DemoUpdate {
 			 * Un objeto persistente se puede obtener cuando hay una conexion con un registro de hibernate 
 			 * se puede lograr haciendo una consulta a la db
 			 */
-			Usuario persistencia = session.get(Usuario.class, 4); // el registro indicado es el que se actualizará
-			persistencia.setUserPassword("fulano"); // Como es un objeto en estado persistente(observado por hibernate) y se da cuenta de una actualizacion, entonces se refleja en la db
+			Usuario persistencia = session.get(Usuario.class, 5); // el registro indicado es el que se actualizará
+			persistencia.setUserEmail("marcos@gmail.com"); // Como es un objeto en estado persistente(observado por hibernate) y se da cuenta de una actualizacion, entonces se refleja en la db
 			
 			/*
 			 * La otra forma con HQL es
 			 * Donde se ejecuta la actualizacion al final 
-			 * Importante userPassword es como está en la variable de Usuario, no como en la db
+			 * Importante: Usuario HQL se basa en el modelo de objetos de Hibernate, donde trabajas con entidades y propiedades de entidades, 
+			 * 	en lugar de con nombres de tablas y columnas directamente
 			 */
-			session.createQuery("UPDATE Usuario SET userPassword = 'sutano' WHERE userid = 3").executeUpdate();
+			session.createQuery("UPDATE Usuario SET userPassword = 'marcos' WHERE userID = 5").executeUpdate();
 			
 			// confirmar la transaccion
 			session.getTransaction().commit();

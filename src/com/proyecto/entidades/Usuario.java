@@ -10,11 +10,11 @@ import javax.persistence.Table;
 public class Usuario {
 	
 	@Id // se especifica que userID es el correspondiente id de la tabla
-	@Column(name = "userid") // se especifica cual es la columna a la cual hace referencia
+	@Column(name = "user_id") // se especifica cual es la columna a la cual hace referencia
 	private int userID;
-	@Column(name = "useremail")
+	@Column(name = "user_email")
 	private String userEmail;
-	@Column(name = "userpassword")
+	@Column(name = "user_password")
 	private String userPassword;
 	
 	// constructor sin parametros

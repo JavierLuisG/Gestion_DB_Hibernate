@@ -24,7 +24,7 @@ public class DemoCreate {
 		try {
 			session.beginTransaction(); // iniciar una transaccion
 			// se instancia un objeto de tipo Usuario y se ingresan los datos segun el constructor para asi aplicar el metodo Save para hacer la insersion
-			Usuario usuario = new Usuario("fulano@gmail.com", "fulano");
+			Usuario usuario = new Usuario("malcon@gmail.com", "malcon");
 			// mediante session se invoca el metodo Save y como parametro el objeto entity que viene con toda la informacion requerida
 			session.save(usuario); // se envia a la db
 			session.getTransaction().commit();	// confirme los cambios, lo hace por medio de commit

@@ -32,8 +32,8 @@ public class DemoRead {
 			 * 
 			 * En este caso esta lista de usuarios es producto de una consulta a traves de la sesion por medio del metodo createQuery
 			 */
-			List<Usuario> usuarios = session.createQuery("from Usuario").list(); // como es HQL se especifica Usuario y no usuario porque se especifica la entidad 
-			System.out.println("\nConsulta general");
+			// Es Usuario porque HQL se basa en el modelo de objetos de Hibernate, donde trabajas con entidades y propiedades de entidades, en lugar de con nombres de tablas y columnas directamente
+			List<Usuario> usuarios = session.createQuery("from Usuario").list(); 
 			for (Usuario usuario : usuarios) {
 				System.out.println(usuario);
 			}
